@@ -1,7 +1,7 @@
 const vscode = require('vscode');
 const path = require('path');
 const fs = require('fs'); // Import the fs module to write files
-const { generateDocumentation } = require('./api'); 
+const { generateDocumentation } = require('./api');
 
 // Function to activate the extension
 function activate(context) {
@@ -28,7 +28,7 @@ function activate(context) {
                 // Define the path for the generated documentation file
                 const docFilePath = path.join(docsFolderPath, 'generated-doc.md');
 
-                // Write the generated documentation to the file
+                // Write the generated documentation to the file (ensure it's a string)
                 fs.writeFileSync(docFilePath, generatedDoc);
 
                 // Show information message about successful documentation generation
